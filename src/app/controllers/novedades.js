@@ -9,9 +9,9 @@ module.exports = {
     getNovedadesData: async (req, res, next) => {
         try{
             novedades = await novedadesServices.getNovedadData();
-            res.status(200).send({
-                data: novedades
-            });
+            res.status(200).send([
+                 novedades
+            ]);
         } catch(err){
             res.status(err.status ? err.status : 500).send({
                 error : err.message
