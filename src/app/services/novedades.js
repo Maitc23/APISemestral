@@ -12,7 +12,7 @@ module.exports = {
             (err, rows, fields) =>{
                 if(err) return reject (err);
                     if(Array.isArray(rows)&& rows.length >0){
-                        resolve(rows && Array.isArray(rows) ? rows : []);
+                        resolve(rows && Array.isArray(rows) ? rows : {});
                     } else {
                         return reject({
                             status: 404,
