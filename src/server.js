@@ -6,7 +6,7 @@ const app = express();
 
 
 //Setings 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 8080);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -24,5 +24,5 @@ app.use('/', require('./app/routes'));
 
 //Server starting
 app.listen(app.get('port'), () => {
-    console.log('Server on port 3000');
+    console.log('Server on port 8080');
 });
